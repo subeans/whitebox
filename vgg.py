@@ -55,11 +55,13 @@ def vgg_arg_scope(weight_decay=0.0005):
     with slim.arg_scope([slim.conv2d], padding='SAME') as arg_sc:
       return arg_sc
 
+    
+#spatial_squeeze = True -> False 로 변경 
 def vgg_small(inputs,
            num_classes=10,
            is_training=True,
            dropout_keep_prob=0.5,
-           spatial_squeeze=True,
+           spatial_squeeze=False,
            reuse=None,
            scope='vgg_small',
            fc_conv_padding='VALID',
