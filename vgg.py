@@ -56,7 +56,6 @@ def vgg_arg_scope(weight_decay=0.0005):
       return arg_sc
 
     
-#spatial_squeeze = True -> False 로 변경 
 def vgg_small(inputs,
            num_classes=10,
            is_training=True,
